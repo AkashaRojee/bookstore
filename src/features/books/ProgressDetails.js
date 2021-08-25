@@ -1,7 +1,7 @@
 import React from 'react';
 import SplitPane from '../../common/components/SplitPane/SplitPane';
 import SplitPaneLayout from '../../common/components/SplitPane/SplitPaneLayout';
-import ProgressCircle from './ProgressCircle';
+import ProgressCircle from '../../common/components/ProgressCircle/ProgressCircle';
 import styles from './ProgressDetails.module.scss';
 
 const ProgressDetails = ({ value }) => (
