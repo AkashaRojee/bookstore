@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './BookForm.module.scss';
 
 const BookForm = () => (
-  <div>
+  <div className={styles['book-form']}>
     <h2>ADD NEW BOOK</h2>
-    <form className={styles.form}>
+    <form>
       <input type="text" placeholder="Book title" />
       <select>
         <option value="" disabled>Category</option>

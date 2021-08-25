@@ -2,6 +2,11 @@
 
 .books {
   @extend %flex-col;
-  gap: 0.938rem;
-  margin: 2.313rem 6.25rem 2.5rem 6.25rem;
+  margin: 2.313rem 6.25rem 16.563rem 6.25rem;
+
+  .book-rows {
+    @extend %flex-col;
+    gap: 0.938rem;
+    margin-bottom: 2.5rem;
+  }
 }

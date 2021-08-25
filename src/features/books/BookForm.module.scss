@@ -1,18 +1,23 @@
 @import '../../app/scss/flex';
 
-.form {
-  @extend %flex-row;
-  gap: 2.125rem;
+.book-form {
+  padding-top: 1.813rem;
+  border-top: 1px solid #e8e8e8;
 
-  input {
-    width: 41.5rem;
-  }
-
-  select {
-    width: 18.813rem;
-  }
-
-  button {
-    width: 11.5rem;
+  form {
+    @extend %flex-row;
+    gap: 2.125rem;
+  
+    input {
+      width: 41.5rem;
+    }
+  
+    select {
+      width: 18.813rem;
+    }
+  
+    button {
+      width: 11.5rem;
+    }
   }
 }
