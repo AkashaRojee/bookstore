@@ -11,7 +11,7 @@ const ProgressDetails = ({ value }) => (
         new SplitPaneLayout('row', 'col', 'col', styles)
       }
       first={
-        <ProgressCircle value={value} />
+        <ProgressCircle />
       }
       second={(
         <>
