@@ -9,10 +9,10 @@ function App() {
     <BrowserRouter basename="/bookstore">
       <Header />
       <Switch>
-        <Route path="/books">
+        <Route path="/">
           <Books />
         </Route>
-        <Route path="/categories">
+        <Route exact path="/categories">
           <Categories />
         </Route>
       </Switch>
