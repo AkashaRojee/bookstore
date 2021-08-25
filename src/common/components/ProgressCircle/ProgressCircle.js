@@ -1,7 +1,6 @@
 import styles from './ProgressCircle.module.scss';
 
-const ProgressCircle = () => (
-  <div className={styles.circle} />
+const ProgressCircle = ({ value }) => (
+  <div className={styles.circle} style={{ '--p': value }} />
 );
-
 export default ProgressCircle;
