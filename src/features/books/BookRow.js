@@ -3,11 +3,11 @@ import ProgressDetails from './ProgressDetails';
 import ChapterDetails from './ChapterDetails';
 import styles from './BookRow.module.scss';
 
-const BookRow = () => (
+const BookRow = ({ book, progress, chapter }) => (
   <div className={styles['book-row']}>
-    <BookDetails />
-    <ProgressDetails value="14" />
-    <ChapterDetails />
+    <BookDetails data={book} />
+    <ProgressDetails value={progress} />
+    <ChapterDetails number={chapter} />
   </div>
 );
 

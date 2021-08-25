@@ -5,8 +5,8 @@ import BookData from './BookData';
 import BookActions from './BookActions';
 import styles from './BookDetails.module.scss';
 
-const BookDetails = () => {
-  console.log(styles);
+const BookDetails = ({ data }) => {
+  console.log(data);
   return (
     <>
       <SplitPane
@@ -14,7 +14,7 @@ const BookDetails = () => {
           new SplitPaneLayout('col', 'col', 'row', styles)
         }
         first={
-          <BookData category="Action" title="The Hunger Games" author="Suzanne Collins" />
+          <BookData data={{ ...data }} />
         }
         second={
           <BookActions />

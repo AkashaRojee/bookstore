@@ -1,8 +1,13 @@
 import BookRow from './BookRow';
+import BookInfo from './BookInfo';
 
 const Books = () => (
   <div className="books">
-    <BookRow />
+    <BookRow
+      book={new BookInfo('Action', 'The Hunger Games', 'Suzanne Collins')}
+      progress="14"
+      chapter="17"
+    />
   </div>
 );
 
