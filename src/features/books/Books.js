@@ -1,6 +1,8 @@
+import BookRow from './BookRow';
+
 const Books = () => (
-  <div className="header">
-    books route
+  <div className="books">
+    <BookRow />
   </div>
 );
 
