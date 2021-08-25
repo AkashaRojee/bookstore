@@ -6,7 +6,7 @@ import styles from './Header.module.scss';
 const Header = () => (
   <div className={styles.header}>
     <WebsiteTitle value="Bookstore CMS" />
-    <Navigation paths={['Books', 'Categories']} />
+    <Navigation paths={['books', 'categories']} />
     <PersonIcon />
   </div>
 );
