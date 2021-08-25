@@ -1,0 +1,6 @@
+@import '../app/scss/flex';
+
+.header {
+  @extend %flex-row;
+  @extend %align-center;
+}

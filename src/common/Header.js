@@ -1,10 +1,13 @@
+import PersonIcon from '@material-ui/icons/Person';
 import WebsiteTitle from './WebsiteTitle';
 import Navigation from './Navigation';
+import styles from './Header.module.scss';
 
 const Header = () => (
-  <div className="header">
+  <div className={styles.header}>
     <WebsiteTitle value="Bookstore CMS" />
-    <Navigation paths={['books', 'categories']} />
+    <Navigation paths={['Books', 'Categories']} />
+    <PersonIcon />
   </div>
 );
 

@@ -5,7 +5,7 @@ import Categories from '../features/categories/Categories';
 
 function App() {
   return (
-    <BrowserRouter basename="/math-magicians">
+    <BrowserRouter basename="/bookstore">
       <Header />
       <Switch>
         <Route path="/books">
