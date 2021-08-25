@@ -7,7 +7,7 @@ const BookRow = ({ book, progress, chapter }) => (
   <div className={styles['book-row']}>
     <BookDetails data={book} />
     <ProgressDetails value={progress} />
-    <ChapterDetails number={chapter} />
+    <ChapterDetails value={chapter} />
   </div>
 );
 

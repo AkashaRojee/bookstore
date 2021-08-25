@@ -1,0 +1,7 @@
+@import '../../app/scss/flex';
+
+.books {
+  @extend %flex-col;
+  gap: 0.938rem;
+  margin: 2.313rem 6.25rem 2.5rem 6.25rem;
+}

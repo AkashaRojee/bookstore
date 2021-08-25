@@ -2,9 +2,12 @@
 
 .book-row {
   @extend %flex-row;
-  @extend %justify-between;
   @extend %align-center;
 
   border: 1px solid black;
   padding: 2rem 9.188rem 1.625rem 1.688rem;
+
+  & > div {
+    width: 100%;
+  }
 }

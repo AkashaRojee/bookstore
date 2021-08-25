@@ -5,23 +5,20 @@ import BookData from './BookData';
 import BookActions from './BookActions';
 import styles from './BookDetails.module.scss';
 
-const BookDetails = ({ data }) => {
-  console.log(data);
-  return (
-    <>
-      <SplitPane
-        layout={
+const BookDetails = ({ data }) => (
+  <>
+    <SplitPane
+      layout={
           new SplitPaneLayout('col', 'col', 'row', styles)
         }
-        first={
-          <BookData data={{ ...data }} />
+      first={
+        <BookData data={{ ...data }} />
         }
-        second={
-          <BookActions />
+      second={
+        <BookActions />
         }
-      />
-    </>
-  );
-};
+    />
+  </>
+);
 
 export default BookDetails;
