@@ -1,0 +1,16 @@
+
+.circle {
+  
+  --v:calc( ((18/5) * var(--p) - 90)*1deg);
+
+  width:100px;
+  height:100px;
+  display:inline-block;
+  border-radius:50%;
+  padding:10px;
+  background:
+    linear-gradient(white,white) content-box,
+    linear-gradient(var(--v), #f2f2f2     50%,transparent 0) 0/min(100%,(50 - var(--p))*100%),
+    linear-gradient(var(--v), transparent 50%,blue        0) 0/min(100%,(var(--p) - 50)*100%),
+    linear-gradient(to right, #f2f2f2 50%,blue 0);
+}
