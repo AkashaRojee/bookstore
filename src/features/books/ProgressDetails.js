@@ -5,7 +5,7 @@ import ProgressCircle from '../../common/components/ProgressCircle/ProgressCircl
 import styles from './ProgressDetails.module.scss';
 
 const ProgressDetails = ({ value }) => (
-  <div className="progress-details">
+  <>
     <SplitPane
       layout={
         new SplitPaneLayout('row', 'col', 'col', styles)
@@ -23,7 +23,7 @@ const ProgressDetails = ({ value }) => (
         </>
       )}
     />
-  </div>
+  </>
 );
 
 export default ProgressDetails;

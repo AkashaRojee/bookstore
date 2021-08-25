@@ -1,3 +1,4 @@
+import React from 'react';
 import SplitPane from '../../common/components/SplitPane/SplitPane';
 import SplitPaneLayout from '../../common/components/SplitPane/SplitPaneLayout';
 import BookData from './BookData';
@@ -7,7 +8,7 @@ import styles from './BookDetails.module.scss';
 const BookDetails = () => {
   console.log(styles);
   return (
-    <div className="book-details">
+    <>
       <SplitPane
         layout={
           new SplitPaneLayout('col', 'col', 'row', styles)
@@ -19,7 +20,7 @@ const BookDetails = () => {
           <BookActions />
         }
       />
-    </div>
+    </>
   );
 };
 
