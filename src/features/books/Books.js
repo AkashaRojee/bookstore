@@ -1,5 +1,6 @@
 import BookRow from './BookRow';
 import BookInfo from './BookInfo';
+import BookForm from './BookForm';
 import styles from './Books.module.scss';
 
 const Books = () => (
@@ -19,6 +20,7 @@ const Books = () => (
       progress="0"
       chapter="Introduction"
     />
+    <BookForm />
   </div>
 );
 
