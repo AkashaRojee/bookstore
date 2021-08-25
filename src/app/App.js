@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from '../common/Header';
 import Books from '../features/books/Books';
 import Categories from '../features/categories/Categories';
+import './scss/styles.scss';
 
 function App() {
   return (
