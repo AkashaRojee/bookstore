@@ -1,6 +1,6 @@
 const Categories = () => (
-  <div className="header">
-    categories route
+  <div className="categories">
+    Under construction
   </div>
 );
 
