@@ -2,9 +2,9 @@ import React from 'react';
 
 const BookActions = () => (
   <>
-    <span>Comments</span>
-    <span>Remove</span>
-    <span>Edit</span>
+    <button type="button">Comments</button>
+    <button type="button">Remove</button>
+    <button type="button">Edit</button>
   </>
 );
 
