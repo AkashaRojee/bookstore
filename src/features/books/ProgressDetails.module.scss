@@ -1,3 +1,5 @@
+@import '../../app/scss/flex';
+
 .pane {
   gap: 1.313rem;
 
@@ -7,5 +9,6 @@
 
   .second {
     gap: 0.063rem;
+    @extend %justify-center;
   }
 }

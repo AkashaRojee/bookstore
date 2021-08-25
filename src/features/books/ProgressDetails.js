@@ -15,7 +15,10 @@ const ProgressDetails = ({ value }) => (
       }
       second={(
         <>
-          <span>{value}</span>
+          <span>
+            {value}
+            %
+          </span>
           <span>completed</span>
         </>
       )}
