@@ -4,7 +4,7 @@ import ProgressDetails from './ProgressDetails';
 const BookRow = () => (
   <div className="book-row">
     <BookDetails />
-    <ProgressDetails />
+    <ProgressDetails value="14" />
   </div>
 );
 

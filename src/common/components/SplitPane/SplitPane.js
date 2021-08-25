@@ -1,11 +1,11 @@
 import styles from './SplitPane.module.scss';
 
 const SplitPane = ({ layout, first, second }) => (
-  <div className={`${styles.pane} ${styles[layout.pane]}`}>
-    <div className={`${styles.first} ${styles[layout.first]}`}>
+  <div className={`${layout.componentStyles.pane} ${styles[layout.pane]}`}>
+    <div className={`${layout.componentStyles.first} ${styles[layout.first]}`}>
       {first}
     </div>
-    <div className={`${styles.second} ${styles[layout.second]}`}>
+    <div className={`${layout.componentStyles.second} ${styles[layout.second]}`}>
       {second}
     </div>
   </div>

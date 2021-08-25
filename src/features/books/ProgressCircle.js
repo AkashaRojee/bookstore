@@ -4,9 +4,7 @@ const ProgressCircle = ({ value }) => {
   document.documentElement.style.setProperty('--p', value);
 
   return (
-    <div className={styles['circle-border']}>
-      <div className={styles.circle} />
-    </div>
+    <div className={styles.circle} />
   );
 };
 
