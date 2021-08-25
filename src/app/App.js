@@ -1,12 +1,21 @@
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from '../common/Header';
+import Books from '../features/books/Books';
+import Categories from '../features/categories/Categories';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-      </header>
-    </div>
+    <BrowserRouter basename="/math-magicians">
+      <Header />
+      <Switch>
+        <Route path="/books">
+          <Books />
+        </Route>
+        <Route path="/categories">
+          <Categories />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
