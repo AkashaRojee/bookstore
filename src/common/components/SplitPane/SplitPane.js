@@ -13,9 +13,14 @@ const SplitPane = ({ layout, first, second }) => (
 );
 
 SplitPane.propTypes = {
-  layout: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
-  first: PropTypes.elementType.isRequired,
-  second: PropTypes.elementType.isRequired,
+  layout: PropTypes.shape({
+    pane: PropTypes.string.isRequired,
+    first: PropTypes.string.isRequired,
+    second: PropTypes.string.isRequired,
+    componentStyles: PropTypes.objectOf(Symbol).isRequired,
+  }).isRequired,
+  first: PropTypes.objectOf(Symbol).isRequired,
+  second: PropTypes.objectOf(Symbol).isRequired,
 };
 
 export default SplitPane;
