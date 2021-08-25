@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SplitPane from '../../common/components/SplitPane/SplitPane';
 import SplitPaneLayout from '../../common/components/SplitPane/SplitPaneLayout';
 import BookData from './BookData';
@@ -20,5 +21,9 @@ const BookDetails = ({ data }) => (
     />
   </>
 );
+
+BookDetails.propTypes = {
+  data: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
+};
 
 export default BookDetails;

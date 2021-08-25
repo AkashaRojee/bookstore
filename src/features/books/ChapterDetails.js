@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './ChapterDetails.module.scss';
 
 const ChapterDetails = ({ value }) => (
@@ -7,5 +8,9 @@ const ChapterDetails = ({ value }) => (
     <button type="button">UPDATE PROGRESS</button>
   </div>
 );
+
+ChapterDetails.propTypes = {
+  value: PropTypes.number.isRequired,
+};
 
 export default ChapterDetails;

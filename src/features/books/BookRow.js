@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import BookDetails from './BookDetails';
 import ProgressDetails from './ProgressDetails';
 import ChapterDetails from './ChapterDetails';
@@ -10,5 +11,11 @@ const BookRow = ({ book, progress, chapter }) => (
     <ChapterDetails value={chapter} />
   </div>
 );
+
+BookRow.propTypes = {
+  book: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
+  progress: PropTypes.number.isRequired,
+  chapter: PropTypes.string.isRequired,
+};
 
 export default BookRow;

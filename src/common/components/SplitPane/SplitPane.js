@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from './SplitPane.module.scss';
 
 const SplitPane = ({ layout, first, second }) => (
@@ -10,5 +11,11 @@ const SplitPane = ({ layout, first, second }) => (
     </div>
   </div>
 );
+
+SplitPane.propTypes = {
+  layout: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
+  first: PropTypes.elementType.isRequired,
+  second: PropTypes.elementType.isRequired,
+};
 
 export default SplitPane;
