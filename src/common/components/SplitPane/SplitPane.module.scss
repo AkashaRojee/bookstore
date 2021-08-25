@@ -7,3 +7,7 @@
 .row {
   @extend %flex-row;
 }
+
+.SplitPane {
+  gap: 1.313rem;
+}

@@ -1,7 +1,7 @@
 import styles from './SplitPane.module.scss';
 
 const SplitPane = ({ layout, first, second }) => (
-  <div className={styles[layout.pane]}>
+  <div className={`${styles.SplitPane} ${styles[layout.pane]}`}>
     <div className={styles[layout.first]}>
       {first}
     </div>
