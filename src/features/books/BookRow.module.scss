@@ -1,0 +1,6 @@
+@import '../../app/scss/flex';
+
+.book-row {
+  @extend %flex-row;
+  gap: 200px;
+}

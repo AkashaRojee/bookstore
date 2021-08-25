@@ -1,8 +1,9 @@
 import BookDetails from './BookDetails';
 import ProgressDetails from './ProgressDetails';
+import styles from './BookRow.module.scss';
 
 const BookRow = () => (
-  <div className="book-row">
+  <div className={styles['book-row']}>
     <BookDetails />
     <ProgressDetails value="14" />
   </div>
