@@ -14,6 +14,8 @@ Things done so far:
 
 ### 1. Initialise project with components
 
+### 2. Implement Redux to manage (add/remove) books
+
 ## Built With
 
 - Major languages: JS, SCSS
