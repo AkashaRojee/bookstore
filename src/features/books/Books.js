@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useSelector } from 'react-redux';
 import BookRow from './components/BookRow';
 import BookForm from './components/BookForm';
@@ -11,14 +10,13 @@ const Books = () => {
     <div className={styles.books}>
       <div className={styles['book-rows']}>
         { books.map((book) => (
-            <BookRow
-              key={book.title}
-              book={book}
-              progress={0}
-              chapter="(Not started yet)"
-            />
-          )
-        )}
+          <BookRow
+            key={book.title}
+            book={book}
+            progress={0}
+            chapter="(Not started yet)"
+          />
+        ))}
       </div>
       <BookForm />
     </div>

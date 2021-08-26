@@ -6,21 +6,26 @@ import BookData from './BookData';
 import BookActions from './BookActions';
 import styles from './BookDetails.module.scss';
 
-const BookDetails = ({ data }) => (
-  <>
-    <SplitPane
-      layout={
-          new SplitPaneLayout('col', 'col', 'row', styles)
-        }
-      first={
-        <BookData data={{ ...data }} />
-        }
-      second={
-        <BookActions />
-        }
-    />
-  </>
-);
+const BookDetails = ({ data }) => {
+  const handleRemove = () => {
+    console.log('remove');
+  };
+  return (
+    <>
+      <SplitPane
+        layout={
+            new SplitPaneLayout('col', 'col', 'row', styles)
+          }
+        first={
+          <BookData data={{ ...data }} />
+          }
+        second={
+          <BookActions onRemove={handleRemove} />
+          }
+      />
+    </>
+  );
+};
 
 BookDetails.propTypes = {
   data: PropTypes.objectOf(PropTypes.string.isRequired).isRequired,
