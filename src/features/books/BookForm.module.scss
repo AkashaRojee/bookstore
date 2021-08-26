@@ -2,22 +2,24 @@
 
 .book-form {
   @extend %flex-col;
+
   gap: 1.188rem;
   padding-top: 1.813rem;
   border-top: 1px solid #e8e8e8;
 
   form {
     @extend %flex-row;
+
     gap: 2.125rem;
-  
+
     input {
       width: 41.5rem;
     }
-  
+
     select {
       width: 18.813rem;
     }
-  
+
     button {
       width: 11.5rem;
     }
