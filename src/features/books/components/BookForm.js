@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-// import { useDispatch } from 'react-redux';
-// import { addBook } from '../booksReducer';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../booksReducer';
 import BookInfo from '../logic/BookInfo';
 import styles from './BookForm.module.scss';
 
@@ -9,7 +9,7 @@ const BookForm = () => {
     title: '',
     author: '',
   });
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -23,7 +23,7 @@ const BookForm = () => {
     e.preventDefault();
     const newBook = new BookInfo('category', input.title, input.author);
     console.log(newBook);
-    // dispatch(addBook())
+    dispatch(addBook(newBook));
   };
 
   return (

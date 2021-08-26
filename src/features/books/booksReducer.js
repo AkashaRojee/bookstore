@@ -21,7 +21,10 @@ export const removeBook = payload => ({
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      //...
+      return [
+        ...state,
+        action.payload,
+      ];
     case REMOVE_BOOK:
       //...
     default:
