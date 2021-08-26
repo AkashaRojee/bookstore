@@ -1,0 +1,18 @@
+@import '../../app/scss/flex';
+
+.header {
+  @extend %flex-row;
+  @extend %align-center;
+
+  gap: 20px;
+
+  nav {
+    @extend %flex-row;
+
+    gap: 20px;
+  }
+
+  svg {
+    margin-left: auto;
+  }
+}
