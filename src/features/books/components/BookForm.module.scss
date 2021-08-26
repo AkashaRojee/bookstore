@@ -9,6 +9,7 @@
 
   form {
     @extend %flex-row;
+
     justify-content: space-between;
     // gap: 2.125rem;
   }
