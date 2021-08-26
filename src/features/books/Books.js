@@ -11,7 +11,7 @@ const Books = () => {
       <div className={styles['book-rows']}>
         { books.map((book) => (
           <BookRow
-            key={book.title}
+            key={book.id}
             book={book}
             progress={0}
             chapter="(Not started yet)"
