@@ -1,6 +1,6 @@
-import BookRow from './BookRow';
-import BookInfo from './BookInfo';
-import BookForm from './BookForm';
+import BookRow from './components/BookRow';
+import BookForm from './components/BookForm';
+import BookInfo from './logic/BookInfo';
 import styles from './Books.module.scss';
 
 const Books = () => (

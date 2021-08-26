@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SplitPane from '../../common/components/SplitPane/SplitPane';
-import SplitPaneLayout from '../../common/components/SplitPane/SplitPaneLayout';
-import ProgressCircle from '../../common/components/ProgressCircle/ProgressCircle';
+import SplitPane from '../../../common/components/SplitPane/SplitPane';
+import SplitPaneLayout from '../../../common/components/SplitPane/SplitPaneLayout';
+import ProgressCircle from '../../../common/components/ProgressCircle/ProgressCircle';
 import styles from './ProgressDetails.module.scss';
 
 const ProgressDetails = ({ value }) => (
