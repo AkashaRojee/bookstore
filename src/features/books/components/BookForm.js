@@ -4,11 +4,13 @@ import { addBook } from '../booksReducer';
 import BookInfo from '../logic/BookInfo';
 import styles from './BookForm.module.scss';
 
+const initialInputs = {
+  title: '',
+  author: '',
+};
+
 const BookForm = () => {
-  const [input, setInput] = useState({
-    title: '',
-    author: '',
-  });
+  const [input, setInput] = useState(initialInputs);
   const dispatch = useDispatch();
 
   const handleInput = (e) => {
@@ -21,9 +23,8 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newBook = new BookInfo('category', input.title, input.author);
-    console.log(newBook);
-    dispatch(addBook(newBook));
+    dispatch(addBook(new BookInfo('category', input.title, input.author)));
+    setInput({ ...initialInputs });
   };
 
   return (
