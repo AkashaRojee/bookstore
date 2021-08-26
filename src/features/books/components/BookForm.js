@@ -10,6 +10,10 @@ const initialInputs = {
   category: '',
 };
 
+const trim = (text) => (
+  text.trim().replace(/  +/g, ' ')
+);
+
 const BookForm = () => {
   const [input, setInput] = useState(initialInputs);
   const dispatch = useDispatch();
@@ -24,8 +28,8 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (Object.values(input).every((value) => value !== '')) {
-      dispatch(addBook(new BookInfo(input.category, input.title, input.author)));
+    if (Object.values(input).every((value) => value.trim() !== '')) {
+      dispatch(addBook(new BookInfo(input.category, trim(input.title), trim(input.author))));
       setInput({ ...initialInputs });
     }
   };
