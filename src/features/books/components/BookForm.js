@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+// import { useDispatch } from 'react-redux';
+// import { addBook } from '../booksReducer';
+import BookInfo from '../logic/BookInfo';
 import styles from './BookForm.module.scss';
 
 const BookForm = () => {
@@ -6,6 +9,7 @@ const BookForm = () => {
     title: '',
     author: '',
   });
+  // const dispatch = useDispatch();
 
   const handleInput = (e) => {
     const { name, value } = e.target;
@@ -15,10 +19,17 @@ const BookForm = () => {
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newBook = new BookInfo('category', input.title, input.author);
+    console.log(newBook);
+    // dispatch(addBook())
+  };
+
   return (
     <div className={styles['book-form']}>
       <h2>ADD NEW BOOK</h2>
-      <form>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <input name="title" type="text" placeholder="Book title" value={input.title} onChange={(e) => handleInput(e)} />
         <input name="author" type="text" placeholder="Author" value={input.author} onChange={(e) => handleInput(e)} />
         <select>
