@@ -30,7 +30,6 @@ const BookForm = () => {
     e.preventDefault();
     if (Object.values(input).every((value) => value.trim() !== '')) {
       dispatch(postBook(new BookInfo(input.category, trim(input.title), trim(input.author))));
-      // dispatch(addBook(new BookInfo(input.category, trim(input.title), trim(input.author))));
       setInput({ ...initialInputs });
     }
   };

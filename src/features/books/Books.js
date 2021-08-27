@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import BookRow from './components/BookRow';
 import BookForm from './components/BookForm';
@@ -5,6 +6,13 @@ import styles from './Books.module.scss';
 
 const Books = () => {
   const books = useSelector((state) => state.books);
+
+  useEffect(
+    () => {
+      
+    },
+    [],
+  );
 
   return (
     <div className={styles.books}>
