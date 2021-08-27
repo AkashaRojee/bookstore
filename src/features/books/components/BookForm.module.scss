@@ -10,18 +10,7 @@
   form {
     @extend %flex-row;
 
-    gap: 2.125rem;
-
-    input {
-      width: 41.5rem;
-    }
-
-    select {
-      width: 18.813rem;
-    }
-
-    button {
-      width: 11.5rem;
-    }
+    justify-content: space-between;
+    // gap: 2.125rem;
   }
 }
