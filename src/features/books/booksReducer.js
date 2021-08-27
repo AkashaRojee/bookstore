@@ -1,6 +1,5 @@
-/* eslint-disable */
-import API from "../../common/utils/API";
-import BookInfo from "./logic/BookInfo";
+import API from '../../common/utils/API';
+import BookInfo from './logic/BookInfo';
 
 const api = new API();
 
@@ -27,9 +26,9 @@ export const getBooks = () => async (dispatch) => {
 };
 
 export const postBook = (payload) => async (dispatch) => {
-  // API needs a field item_id goes against ESLint's camelCase rule
-  await api.post(Object.assign(payload, { 'item_id': payload.id }));
-  delete payload.item_id;
+  const apiPayload = JSON.parse(JSON.stringify(payload));
+  // API needs an item_id field, which is against ESLint's camelCase rule
+  await api.post(Object.assign(apiPayload, { item_id: payload.id }));
   dispatch(addBook(payload));
 };
 

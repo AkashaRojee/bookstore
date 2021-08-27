@@ -1,4 +1,3 @@
-/* eslint-disable */
 export default class API {
   constructor() {
     this.base = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/LDqE4jqcttj5TFLLJ2je/books';
@@ -15,7 +14,6 @@ export default class API {
   }
 
   async post(payload) {
-
     this.url = this.base;
 
     await fetch(
@@ -34,18 +32,15 @@ export default class API {
   }
 
   async delete(payload) {
+    this.url = `${this.base}/${payload}`;
 
-    this.url = this.base + `/${payload}`;
-
-    const res = await fetch (
+    await fetch(
 
       this.url,
 
       {
-        method: 'DELETE'
-      }
+        method: 'DELETE',
+      },
     );
-
-    console.log(res);
   }
 }
