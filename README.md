@@ -16,6 +16,8 @@ Things done so far:
 
 ### 2. Implement Redux to manage (add/remove) books
 
+### 3. Connect API
+
 ## Built With
 
 - Major languages: JS, SCSS
