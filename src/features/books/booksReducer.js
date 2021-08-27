@@ -9,18 +9,6 @@ const initialState = [];
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-export const getBooks = () => async (dispatch) => {
-  const apiBooks = await api.get();
-  Object.entries(apiBooks).forEach(([id, book]) => {
-    dispatch(addBook(new BookInfo(book[0].category, book[0].title, 'N/A', id)));
-  });
-};
-
-export const postBook = (payload) => async (dispatch) => {
-  await api.post(payload); 
-  dispatch(addBook(payload));
-};
-
 export const addBook = (payload) => ({
   type: ADD_BOOK,
   payload,
@@ -30,6 +18,25 @@ export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
   payload,
 });
+
+export const getBooks = () => async (dispatch) => {
+  const apiBooks = await api.get();
+  Object.entries(apiBooks).forEach(([id, book]) => {
+    dispatch(addBook(new BookInfo(book[0].category, book[0].title, 'N/A', id)));
+  });
+};
+
+export const postBook = (payload) => async (dispatch) => {
+  // API needs a field item_id goes against ESLint's camelCase rule
+  await api.post(Object.assign(payload, { 'item_id': payload.id }));
+  delete payload.item_id;
+  dispatch(addBook(payload));
+};
+
+export const deleteBook = (payload) => async (dispatch) => {
+  await api.delete(payload);
+  dispatch(removeBook(payload));
+};
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {

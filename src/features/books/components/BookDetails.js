@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../booksReducer';
+import { deleteBook } from '../booksReducer';
 import SplitPane from '../../../common/components/SplitPane/SplitPane';
 import SplitPaneLayout from '../../../common/components/SplitPane/SplitPaneLayout';
 import BookData from './BookData';
@@ -12,7 +12,7 @@ const BookDetails = ({ data: { id, ...dataToDisplay } }) => {
   const dispatch = useDispatch();
 
   const handleRemove = () => {
-    dispatch(removeBook(id));
+    dispatch(deleteBook(id));
   };
 
   return (
