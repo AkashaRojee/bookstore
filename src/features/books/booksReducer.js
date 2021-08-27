@@ -1,34 +1,17 @@
 /* eslint-disable */
-const ADD_BOOK = 'bookStore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+import API from "../../common/utils/API";
+
+const api = new API();
 
 const initialState = [];
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/LDqE4jqcttj5TFLLJ2je/books';
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-async function post(payload) {
-  await fetch(
-
-    url,
-
-    {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(payload),
-    },
-  );
-
-  
-}
-
-export const postBook = (payload) => {
-  return async function(dispatch) {
-    await post(payload); 
-    dispatch(addBook(payload));
-  };
-}
+export const postBook = (payload) => async (dispatch) => {
+  await api.post(payload); 
+  dispatch(addBook(payload));
+};
 
 export const addBook = (payload) => ({
   type: ADD_BOOK,
