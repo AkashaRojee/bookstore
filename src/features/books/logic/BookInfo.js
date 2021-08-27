@@ -1,6 +1,6 @@
 export default class BookInfo {
-  constructor(category, title, author) {
-    this.item_id = `${title}-${author}`;
+  constructor(category, title, author, id) {
+    this.item_id = id || `${title}-${author}`;
     this.category = category;
     this.title = title;
     this.author = author;

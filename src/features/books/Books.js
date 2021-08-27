@@ -1,15 +1,17 @@
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getBooks } from './booksReducer';
 import BookRow from './components/BookRow';
 import BookForm from './components/BookForm';
 import styles from './Books.module.scss';
 
 const Books = () => {
+  const dispatch = useDispatch();
   const books = useSelector((state) => state.books);
 
   useEffect(
     () => {
-      
+      dispatch(getBooks());
     },
     [],
   );
