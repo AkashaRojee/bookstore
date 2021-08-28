@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../booksReducer';
+import { postBook } from '../booksReducer';
 import BookInfo from '../logic/BookInfo';
 import styles from './BookForm.module.scss';
 
@@ -29,7 +29,7 @@ const BookForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (Object.values(input).every((value) => value.trim() !== '')) {
-      dispatch(addBook(new BookInfo(input.category, trim(input.title), trim(input.author))));
+      dispatch(postBook(new BookInfo(input.category, trim(input.title), trim(input.author))));
       setInput({ ...initialInputs });
     }
   };
