@@ -32,10 +32,12 @@ button {
 //composed into Header module
 .header {
   font-family: $header-font;
+
   h1 {
     color: $blue;
     font-size: $font-big;
   }
+
   nav {
     font-size: $font-small;
   }
@@ -52,10 +54,12 @@ button {
       font-weight: bold;
       opacity: 0.5;
     }
+
     &:nth-of-type(2) {
       font-size: $font-medium;
       font-weight: bold;
     }
+
     &:nth-of-type(3) {
       color: $blue;
     }
@@ -71,15 +75,15 @@ button {
 //composed into ProgressDetails module
 .progress-details {
   font-family: $header-font;
-  span {
-    &:nth-of-type(1) {
-      font-size: $font-big;
-      font-weight: bold;
-    }
-    &:nth-of-type(2) {
-      font-size: $font-small;
-      opacity: 0.5;
-    }
+
+  .value {
+    font-size: $font-big;
+    font-weight: bold;
+  }
+
+  .text {
+    font-size: $font-small;
+    opacity: 0.5;
   }
 }
 
@@ -88,10 +92,8 @@ button {
   font-family: $text-font;
   font-size: $font-small;
 
-  span {
-    &:nth-of-type(1) {
-      opacity: 0.5;
-    }
+  .current {
+    opacity: 0.5;
   }
 }
 

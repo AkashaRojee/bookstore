@@ -4,12 +4,11 @@
 .header {
   @extend %flex-row;
   @extend %align-center;
-  
+
   gap: 20px;
   padding: $y-default $x-default;
-  
   composes: header from global;
-  
+
   nav {
     @extend %flex-row;
 
