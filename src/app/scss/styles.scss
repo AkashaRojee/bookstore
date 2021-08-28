@@ -18,6 +18,16 @@ $font-small: 0.875rem;
   color: $black;
 }
 
+button {
+  font-family: inherit;
+  font-size: inherit;
+  background: $blue;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1.375rem;
+}
+
 //composed into Header module
 .header {
   font-family: $header-font;
@@ -51,6 +61,7 @@ $font-small: 0.875rem;
   }
 
   button {
+    padding: 0;
     font-family: inherit;
     color: $blue;
   }
@@ -81,18 +92,9 @@ $font-small: 0.875rem;
       opacity: 0.5;
     }
   }
-
-  button {
-    font-family: inherit;
-    font-size: inherit;
-    background: $blue;
-    color: white;
-    border: none;
-    border-radius: 3px;
-    padding: 0.5rem 1.375rem;
-  }
 }
 
+//composed into BookForm module
 .book-form {
   font-family: $header-font;
 
@@ -100,17 +102,9 @@ $font-small: 0.875rem;
     font-size: $font-medium;
     opacity: 0.5;
   }
+
+  button {
+    font-weight: bold;
+    font-size: $font-small;
+  }
 }
-
-
-// h1 {
-//   // font-family: $header-font;
-  
-//   
-// }
-
-// nav {
-//   // font-family: $header-font;
-
-//   
-// }
