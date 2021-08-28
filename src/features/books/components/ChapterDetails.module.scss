@@ -5,4 +5,8 @@
   @extend %justify-between;
 
   composes: chapter-details from global;
+
+  button {
+    width: 50%;
+  }
 }
