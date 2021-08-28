@@ -3,14 +3,16 @@
 
 .books {
   @extend %flex-col;
+  background-color: #f5f6fa;
 
-  margin: $y-default $x-default;
+  padding: $y-default $x-default;
 
   // margin: 2.313rem 6.25rem 16.563rem 6.25rem;
 
   .book-rows {
     @extend %flex-col;
 
+    background-color: white;
     gap: 0.938rem;
     margin-bottom: 2.5rem;
   }
