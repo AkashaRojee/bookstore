@@ -18,6 +18,7 @@ $font-small: 0.875rem;
   color: $black;
 }
 
+//reusable button throughout project
 button {
   font-family: inherit;
   font-size: inherit;
@@ -104,6 +105,7 @@ button {
   }
 
   button {
+    font-family: $text-font;
     font-weight: bold;
     font-size: $font-small;
   }
