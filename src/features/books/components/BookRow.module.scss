@@ -3,11 +3,10 @@
 
 .book-row {
   @extend %flex-row;
-  background-color: white;
 
+  background-color: white;
   border: 1px solid $grey;
   border-radius: 4px;
-
   padding: $y-default $x-inner;
 
   & > div {
