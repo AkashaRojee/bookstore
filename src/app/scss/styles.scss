@@ -58,6 +58,21 @@ $font-small: 0.875rem;
   }
 }
 
+//composed into ProgressDetails module
+.progress-details {
+  font-family: $header-font;
+  span {
+    &:nth-of-type(1) {
+      font-size: $font-big;
+      font-weight: bold;
+    }
+    &:nth-of-type(2) {
+      font-size: $font-small;
+      opacity: 0.5;
+    }
+  }
+}
+
 
 // h1 {
 //   // font-family: $header-font;

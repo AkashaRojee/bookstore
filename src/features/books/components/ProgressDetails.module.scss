@@ -3,6 +3,8 @@
 .pane {
   gap: 1.313rem;
 
+  composes: progress-details from global;
+
   .first {
     gap: 0;
   }
