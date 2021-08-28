@@ -1,6 +1,7 @@
 @import '../../../app/scss/flex';
 
 .pane {
+  @extend %self-center;
   gap: 1.313rem;
 
   composes: progress-details from global;

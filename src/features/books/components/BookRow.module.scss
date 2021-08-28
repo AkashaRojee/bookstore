@@ -3,9 +3,10 @@
 
 .book-row {
   @extend %flex-row;
-  @extend %align-center;
 
-  border: 1px solid black;
+  border: 1px solid $grey;
+  border-radius: 4px;
+  
   padding: $y-default $x-inner;
 
   & > div {

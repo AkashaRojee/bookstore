@@ -2,4 +2,7 @@
 
 .chapter-details {
   @extend %flex-col;
+  @extend %justify-between;
+  
+  composes: chapter-details from global;
 }
