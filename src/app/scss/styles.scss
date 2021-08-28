@@ -1,5 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+$header-font: 'Montserrat', sans-serif;
+$blue: #0290ff;
+$black: #121212;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+//composed into Header module
+.header {
+  font-family: $header-font;
+  h1 {
+    color: $blue;
+    font-size: 1.875rem;
+  }
+  nav {
+    font-size: 0.813rem;
+  }
+}
+
+
+// h1 {
+//   // font-family: $header-font;
+  
+//   
+// }
+
+// nav {
+//   // font-family: $header-font;
+
+//   
+// }

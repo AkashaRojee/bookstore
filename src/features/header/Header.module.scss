@@ -3,9 +3,11 @@
 .header {
   @extend %flex-row;
   @extend %align-center;
-
+  
   gap: 20px;
-
+  
+  composes: header from global;
+  
   nav {
     @extend %flex-row;
 
