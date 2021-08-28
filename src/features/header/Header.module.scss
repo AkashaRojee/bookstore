@@ -6,7 +6,7 @@
   @extend %align-center;
   
   gap: 20px;
-  padding: 0px $x-default;
+  padding: $y-default $x-default;
   
   composes: header from global;
   

@@ -1,11 +1,12 @@
 @import '../../../app/scss/flex';
+@import '../../../app/scss/variables';
 
 .book-row {
   @extend %flex-row;
   @extend %align-center;
 
   border: 1px solid black;
-  padding: 2rem 9.188rem 1.625rem 1.688rem;
+  padding: $y-default $x-inner;
 
   & > div {
     width: 33.3%;

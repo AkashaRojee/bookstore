@@ -4,7 +4,7 @@
 .books {
   @extend %flex-col;
 
-  margin: 0px $x-default;
+  margin: $y-default $x-default;
 
   // margin: 2.313rem 6.25rem 16.563rem 6.25rem;
 
