@@ -1,9 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
 
 $header-font: 'Montserrat', sans-serif;
+$text-font: 'Roboto Slab', serif;
 $blue: #0290ff;
+$pale-blue: #4386bf;
 $black: #121212;
-
+$font-big: 2rem;
+$font-medium: 1.375rem;
+$font-small: 0.875rem;
 
 * {
   margin: 0;
@@ -12,15 +16,45 @@ $black: #121212;
   color: $black;
 }
 
+.text-font {
+  font-family: $text-font;
+}
+
 //composed into Header module
 .header {
   font-family: $header-font;
   h1 {
     color: $blue;
-    font-size: 1.875rem;
+    font-size: $font-big;
   }
   nav {
-    font-size: 0.813rem;
+    font-size: $font-small;
+  }
+}
+
+//composed into BookDetails module
+.book-details {
+  font-family: $text-font;
+  font-size: $font-small;
+
+  span {
+    &:nth-of-type(1) {
+      font-family: $header-font;
+      font-weight: bold;
+      opacity: 0.5;
+    }
+    &:nth-of-type(2) {
+      font-size: $font-medium;
+      font-weight: bold;
+    }
+    &:nth-of-type(3) {
+      color: $blue;
+    }
+  }
+
+  button {
+    font-family: inherit;
+    color: $blue;
   }
 }
 
