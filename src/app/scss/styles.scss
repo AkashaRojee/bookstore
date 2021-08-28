@@ -1,5 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;700&display=swap');
+
+$header-font: 'Montserrat', sans-serif;
+$text-font: 'Roboto Slab', serif;
+
+$blue: #0290ff;
+$pale-blue: #4386bf;
+$black: #121212;
+
+$font-big: 2rem;
+$font-medium: 1.375rem;
+$font-small: 0.875rem;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: $black;
+}
+
+//reusable button throughout project
+button {
+  font-family: inherit;
+  font-size: inherit;
+  background: $blue;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1.375rem;
+}
+
+//composed into Header module
+.header {
+  font-family: $header-font;
+
+  h1 {
+    color: $blue;
+    font-size: $font-big;
+  }
+
+  nav {
+    font-size: $font-small;
+  }
+}
+
+//composed into BookDetails module
+.book-details {
+  font-family: $text-font;
+  font-size: $font-small;
+
+  span {
+    &:nth-of-type(1) {
+      font-family: $header-font;
+      font-weight: bold;
+      opacity: 0.5;
+    }
+
+    &:nth-of-type(2) {
+      font-size: $font-medium;
+      font-weight: bold;
+    }
+
+    &:nth-of-type(3) {
+      color: $blue;
+    }
+  }
+
+  button {
+    padding: 0;
+    font-family: inherit;
+    color: $blue;
+  }
+}
+
+//composed into ProgressDetails module
+.progress-details {
+  font-family: $header-font;
+
+  .value {
+    font-size: $font-big;
+    font-weight: bold;
+  }
+
+  .text {
+    font-size: $font-small;
+    opacity: 0.5;
+  }
+}
+
+//composed into ChapterDetails module
+.chapter-details {
+  font-family: $text-font;
+  font-size: $font-small;
+
+  .current {
+    opacity: 0.5;
+  }
+}
+
+//composed into BookForm module
+.book-form {
+  font-family: $header-font;
+
+  h2 {
+    font-size: $font-medium;
+    opacity: 0.5;
+  }
+
+  button {
+    font-family: $text-font;
+    font-weight: bold;
+    font-size: $font-small;
+  }
 }

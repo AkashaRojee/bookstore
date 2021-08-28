@@ -16,11 +16,11 @@ const ProgressDetails = ({ value }) => (
       }
       second={(
         <>
-          <span>
+          <span className="value">
             {value}
             %
           </span>
-          <span>completed</span>
+          <span className="text">completed</span>
         </>
       )}
     />

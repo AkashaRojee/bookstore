@@ -18,6 +18,8 @@ Things done so far:
 
 ### 3. Connect API
 
+### 4. Add styling
+
 ## Built With
 
 - Major languages: JS, SCSS
